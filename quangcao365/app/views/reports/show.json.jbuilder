@@ -1,0 +1,1 @@
+ json.extract! @report, :id, :name, :phone, :email, :description
