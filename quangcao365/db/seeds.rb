@@ -1,10 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
 User.create(email: 'quangcao365@admin.com', 
             nickname: 'meo', 
             name: 'DUONG', 
@@ -18,11 +11,17 @@ Report.create(
     name:"Tuan ho",
     phone: "0123456789",
     email: "tuannho@novahub.vn",
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-    It has survived not only five centuries, but also the leap into electronic typesetting, 
-    remaining essentially unchanged. It was popularised in the 1960s with the release of 
-    Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing 
-    software like Aldus PageMaker including versions of Lorem Ipsum."
+    description: Faker::Lorem
 )
+
+product=["in_kinh", "in_mika", "in_formex", "in_alumminium", "in_go",
+        "chu_noi_mica", "chu_noi_aluminium", "chu_noi_inox",
+        "tranh_uv", "tranh_trang_tri",
+        "bien_aluminium", "bien_bat_hiflex", "bien_bat_3m", "bien_mica", "bien_treo_tran", "bien_vay", "drop_quang_cao",
+        "bien_inox_an_mon", "bien_chuc_danh",
+        "hop_den_sieu_mong", "hop_den_uv", "hop_den_led",
+        "decal_mo", "decal_pp", "decal_oto", "decal_trong", "decal_trang_tri",
+        "nguon_den", "standee"]
+product.length.times do |n|
+    Product.create(name: product[n])
+end
