@@ -1,7 +1,8 @@
 FactoryBot.define do
   factory :article do
-    name "MyString"
-    pictuer "MyString"
+    title "MyString"
+    image "MyString"
     content "MyString"
+    product "MyString"
   end
 end
